@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Data calculator</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nanum+Gothic'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div  class="form">
+  <div class="elem-group">
+   
+  
+  <div class="elem-group inlined">
+    <label for="checkin-date">Початкова дата</label>
+    <input class= "data-input" type="date" step=1 id="checkin-date" min="1977-01-01" name="checkin" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkout-date">Кінцева дата</label>
+    <input class= "data-input" type="date" step=1 id="checkout-date" max="2030-01-01" name="checkout" disabled>
+  </div>
+  <div class="elem-group">
+    <label for="room-selection">Фільтр</label>
+    <select id="preset-selection" name="preset_preference" required>
+        <option></option>
+        <option>Тиждень</option>
+        <option>Місяць</option>
+    </select>
+    </div>
+    <div class="elem-group">
+    <label for="room-selection">Фільтр</label>
+    <select id="DaysType" name="room_preference" required>
+        <option>Всі дні</option>
+        <option>Будні дні</option>
+        <option>Вихідні дні</option>
+    </select>
+    </div>
+    <div class="elem-group">
+    <label for="room-selection">Величина розрахунку</label>
+    <select id="Dimension" name="room_preference" required>
+        <option>Порахувати кількість днів</option>
+        <option>Порахувати кількість годин</option>
+        <option>Порахувати кількість хвилин</option>
+        <option>Порахувати кількість секунд</option>
+    </select>
+  </div>
+  <hr>
+  <button id= "CalculateButton" type="submit">Розрахувати</button>
+</div>
+  <div  id="CalculationHistory" class="elem-group"> 
+        <h2 class="label">Попередні результати</h2>
+           <table class="history">
+              <thead>
+                 <tr>
+                   <th>Проміжок</th>
+                   <th>Результат</th>
+                   </tr>
+               </thead>
+               <tbody> </tbody>
+           </table>
+    </div>
+  </div>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
